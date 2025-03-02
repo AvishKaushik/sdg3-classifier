@@ -1,0 +1,27 @@
+name: Deploy React to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Change this if your default branch is different
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Project
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        env:
+          VITE_GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          git config --global user.email "avish.kaushik20@gmail.com"
+          git config --global user.name "AvishKaushik"
+          npx gh-pages -d dist -r "https://$VITE_GH_TOKEN@github.com/AvishKaushik/sdg3-classifier.git"
