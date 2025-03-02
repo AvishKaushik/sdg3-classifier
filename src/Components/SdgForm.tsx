@@ -105,7 +105,7 @@ function SdgForm() {
 
   const createIssue = async () => {
 
-    const token = "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"; // ⚠️ Replace with your token
+    const token = import.meta.env.VITE_GH_TOKEN; // ⚠️ Replace with your token
     const jsonContent = generateCodeJson();
     const urlParts = repositoryUrl.split("/");
     const owner = urlParts[urlParts.length - 2];

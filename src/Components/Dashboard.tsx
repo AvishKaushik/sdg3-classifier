@@ -46,7 +46,8 @@ const Dashboard = () => {
         const urlParts = repositoryUrl.split("/");
         const owner = urlParts[urlParts.length - 2];
         const repo = urlParts[urlParts.length - 1];
-        const token = "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";
+        const token = import.meta.env.VITE_GH_TOKEN;
+        console.log(token);
 
         // Fetch contributors data
         const contributorsResponse = await fetch(
