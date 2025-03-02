@@ -46,7 +46,7 @@ const Dashboard = () => {
         const urlParts = repositoryUrl.split("/");
         const owner = urlParts[urlParts.length - 2];
         const repo = urlParts[urlParts.length - 1];
-        const token = "";
+        const token = import.meta.env.VITE_ALL_ACCESS_TOKEN_GIT;
 
         // Fetch contributors data
         const contributorsResponse = await fetch(
