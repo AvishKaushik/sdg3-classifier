@@ -12,14 +12,19 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
       - name: Install Dependencies
         run: npm install
 
       - name: Build Project
         run: npm run build
 
-      - name: Verify Build Directory
-        run: ls -al build  # This will list the contents of the build folder to verify it exists
+      - name: Verify Dist Directory
+        run: ls -al dist  # This will list the contents of the build folder to verify it exists
 
       - name: Deploy to GitHub Pages
         if: success()
