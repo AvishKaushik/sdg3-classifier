@@ -12,6 +12,19 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Clear node_modules and Reinstall Dependencies
+        run: |
+          rm -rf node_modules
+          npm install
+
+      - name: Install Dependencies
+        run: npm install
+
       - name: Build Project
         run: npm run build
 
