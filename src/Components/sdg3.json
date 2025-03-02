@@ -1,0 +1,93 @@
+{
+    "sdg": "3",
+    "title": "Good Health and Well-Being",
+    "questions": [
+      {
+        "id": "3",
+        "question": "Does your project promote healthcare, mental health, fitness, or general well-being?",
+        "options": ["yes", "no", "unsure"],
+        "response": null,
+  
+        "targets": [
+          {
+            "id": "3.1",
+            "question": "Does your project help reduce maternal mortality?",
+            "options": ["yes", "no", "unsure"],
+            "response": null
+          },
+          {
+            "id": "3.2",
+            "question": "Does it prevent child mortality under 5 years of age?",
+            "options": ["yes", "no", "unsure"],
+            "response": null
+          },
+          {
+            "id": "3.3",
+            "question": "Does it combat communicable diseases like AIDS, tuberculosis, and malaria?",
+            "options": ["yes", "no", "unsure"],
+            "response": null
+          },
+          {
+            "id": "3.4",
+            "question": "Does it address non-communicable diseases such as mental health, cancer, and heart disease?",
+            "options": ["yes", "no", "unsure"],
+            "response": null
+          },
+          {
+            "id": "3.5",
+            "question": "Does it prevent and treat substance abuse, including drug and alcohol addiction?",
+            "options": ["yes", "no", "unsure"],
+            "response": null
+          },
+          {
+            "id": "3.6",
+            "question": "Does it work towards halving deaths and injuries from road traffic accidents?",
+            "options": ["yes", "no", "unsure"],
+            "response": null
+          },
+          {
+            "id": "3.7",
+            "question": "Does it improve access to reproductive healthcare and family planning?",
+            "options": ["yes", "no", "unsure"],
+            "response": null
+          },
+          {
+            "id": "3.8",
+            "question": "Does it promote universal health coverage and affordable healthcare?",
+            "options": ["yes", "no", "unsure"],
+            "response": null
+          },
+          {
+            "id": "3.9",
+            "question": "Does it reduce deaths and illnesses from pollution and hazardous chemicals?",
+            "options": ["yes", "no", "unsure"],
+            "response": null
+          },
+          {
+            "id": "3.a",
+            "question": "Does it support reducing tobacco consumption?",
+            "options": ["yes", "no", "unsure"],
+            "response": null
+          },
+          {
+            "id": "3.b",
+            "question": "Does it promote vaccine research and access to medicines for all?",
+            "options": ["yes", "no", "unsure"],
+            "response": null
+          },
+          {
+            "id": "3.c",
+            "question": "Does it increase health financing and the healthcare workforce?",
+            "options": ["yes", "no", "unsure"],
+            "response": null
+          },
+          {
+            "id": "3.d",
+            "question": "Does it strengthen early warning and risk reduction for global health crises?",
+            "options": ["yes", "no", "unsure"],
+            "response": null
+          }
+        ]
+      }
+    ]
+  }
