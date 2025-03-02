@@ -12,14 +12,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-
-      - name: Install Dependencies
-        run: npm install
-
       - name: Build Project
         run: npm run build
 
@@ -33,4 +25,4 @@ jobs:
         run: |
           git config --global user.email "avish.kaushik20@gmail.com"
           git config --global user.name "AvishKaushik"
-          npx gh-pages -d build -r "https://$ALL_ACCESS_TOKEN_GIT@github.com/AvishKaushik/sdg3-classifier.git"
+          npx gh-pages -d dist -r "https://$ALL_ACCESS_TOKEN_GIT@github.com/AvishKaushik/sdg3-classifier.git"
