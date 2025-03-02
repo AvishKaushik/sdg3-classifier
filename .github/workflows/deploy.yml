@@ -22,6 +22,6 @@ jobs:
         env:
           VITE_GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          git config --global user.email "avish.kaushik@gwmail.gwu.edu"
           git config --global user.name "AvishKaushik"
+          git config --global user.email "avish.kaushik@gwu.edu"
           npx gh-pages -d dist -r "https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/AvishKaushik/sdg3-classifier.git"
