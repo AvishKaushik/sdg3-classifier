@@ -16,14 +16,7 @@ jobs:
         run: npm install
 
       - name: Build Project
-        run: npm run build            
-        
-      - name: Remove `.git` from `dist`
-        run: rm -rf dist/.git
-
-        
-      - name: Clean `gh-pages` Cache
-        run: rm -rf node_modules/.cache/gh-pages
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         env:
@@ -31,5 +24,4 @@ jobs:
         run: |
           git config --global user.email "avish.kaushik20@gmail.com"
           git config --global user.name "AvishKaushik"
-          npx gh-pages -d dist --no-history -r "https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/AvishKaushik/sdg3-classifier.git"
-
+          npx gh-pages -d dist -r "https://$VITE_GH_TOKEN@github.com/AvishKaushik/sdg3-classifier.git"
