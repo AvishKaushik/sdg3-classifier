@@ -18,7 +18,11 @@ jobs:
       - name: Build Project
         run: npm run build
 
+      - name: Verify Build Directory
+        run: ls -al build  # This will list the contents of the build folder to verify it exists
+
       - name: Deploy to GitHub Pages
+        if: success()
         env:
           ALL_ACCESS_TOKEN_GIT: ${{ secrets.ALL_ACCESS_TOKEN_GIT }}
         run: |
