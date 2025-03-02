@@ -16,7 +16,14 @@ jobs:
         run: npm install
 
       - name: Build Project
-        run: npm run build
+        run: npm run build            
+        
+      - name: Remove `.git` from `dist`
+        run: rm -rf dist/.git
+
+        
+      - name: Clean `gh-pages` Cache
+        run: rm -rf node_modules/.cache/gh-pages
 
       - name: Deploy to GitHub Pages
         env:
