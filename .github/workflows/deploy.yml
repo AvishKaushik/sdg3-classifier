@@ -18,6 +18,9 @@ jobs:
       - name: Build Project
         run: npm run build
 
+      - name: Set up token
+        run: echo "VITE_ALL_ACCESS_TOKEN_GIT=${{ secrets.ALL_ACCESS_TOKEN_GIT }}" >> .env
+
       - name: Deploy to GitHub Pages
         env:
           VITE_ALL_ACCESS_TOKEN_GIT: ${{ secrets.ALL_ACCESS_TOKEN_GIT }}
