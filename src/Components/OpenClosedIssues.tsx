@@ -6,11 +6,14 @@ import { Typography } from "@mui/material";
 Chart.register(ArcElement, Tooltip, Legend);
 
 interface OpenClosedIssuesProps {
-  open: string;   // Open issues count
+  open: string; // Open issues count
   closed: string; // Closed issues count
 }
 
-const OpenClosedIssues: React.FC<OpenClosedIssuesProps> = ({ open, closed }) => {
+const OpenClosedIssues: React.FC<OpenClosedIssuesProps> = ({
+  open,
+  closed,
+}) => {
   // Ensure open and closed are valid numbers before rendering
   const openCount = open ? parseInt(open, 10) : 0;
   const closedCount = closed ? parseInt(closed, 10) : 0;
@@ -18,9 +21,9 @@ const OpenClosedIssues: React.FC<OpenClosedIssuesProps> = ({ open, closed }) => 
   // If both open and closed are zero or not valid, don't render the chart
   if (openCount === 0 && closedCount === 0) {
     return (
-        <>
-        <Typography variant="body2" color="text.secondary">
-            No data available.
+      <>
+        <Typography variant="body2" color="text.secondary" marginTop={3}>
+          No data available.
         </Typography>
       </>
     );

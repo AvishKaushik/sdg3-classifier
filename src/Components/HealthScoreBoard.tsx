@@ -1,7 +1,7 @@
 import { Grid, Card, CardContent, Typography, Box } from "@mui/material";
 import React from "react";
 
-function SdgScoreboard({ response, urlGiven }) {
+function HealthScoreboard({ response, urlGiven }) {
   // Determine progress bar color
   const getColor = (score) => {
     if (score < 40) return "#e53935"; // Red for low scores
@@ -14,7 +14,7 @@ function SdgScoreboard({ response, urlGiven }) {
       <Card sx={{ height: "100%", p: 2 }}>
         <Box display="flex" justifyContent="center" mb={2}>
           <Typography variant="h6" fontWeight="bold">
-            SDG3 Score
+            Health Score
           </Typography>
         </Box>
         <CardContent>
@@ -24,8 +24,7 @@ function SdgScoreboard({ response, urlGiven }) {
             </Typography>
           ) : response === "-1" ? (
             <Typography variant="body2" color="text.secondary">
-              No SDG3 Score Available, raise a new issue by filling the SDG Form
-              component.
+              No health score found
             </Typography>
           ) : (
             <>
@@ -60,4 +59,4 @@ function SdgScoreboard({ response, urlGiven }) {
   );
 }
 
-export default SdgScoreboard;
+export default HealthScoreboard;
