@@ -105,7 +105,7 @@ function SdgForm() {
 
   const createIssue = async () => {
 
-    const token = import.meta.env.VITE_ALL_ACCESS_TOKEN_GIT; // ⚠️ Replace with your token
+    const token = "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"; // ⚠️ Replace with your token
     const jsonContent = generateCodeJson();
     const urlParts = repositoryUrl.split("/");
     const owner = urlParts[urlParts.length - 2];
